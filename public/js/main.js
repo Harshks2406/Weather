@@ -27,10 +27,18 @@ const getInfo = async(event) =>{
             console.log(tempMood);
 
             //condtion to check weather
-
+            var timedecide = new Date();
+            var hourdecide = timedecide.getHours();
             if(tempMood === "Clear"){
-                temp_status.innerHTML =
+                if(hourdecide>20 || hourdecide<5){
+                    temp_status.innerHTML =
+                    "<i class= 'fas fa-moon' style='color: #eccc68;'></i>"
+                }
+                else{
+                    temp_status.innerHTML =
                 "<i class= 'fas fa-sun' style='color: #eccc68;'></i>";
+                }
+                
             }
             else if(tempMood ==="Clouds"){
                 temp_status.innerHTML =
@@ -45,8 +53,14 @@ const getInfo = async(event) =>{
                 "<i class='fas fa-smog' style='color: #f1f2f6;'></i>";
             }
             else{
-                temp_status.innerHTML =
+                if(hourdecide>20 || hourdecide<5){
+                    temp_status.innerHTML =
+                    "<i class= 'fas fa-moon' style='color: #eccc68;'></i>"
+                }
+                else{
+                    temp_status.innerHTML =
                 "<i class= 'fas fa-sun' style='color: #eccc68;'></i>";
+                }
             }
             datahide.classList.remove('data_hide');
         } catch{
