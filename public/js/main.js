@@ -19,12 +19,10 @@ const getInfo = async(event) =>{
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=e7d12ef78d130ac5496658a66ddad17f`;
             const response = await fetch(url);
             const data = await response.json();
-            console.log(data);
             const arrData = [data]; 
             city_name.innerText= `${arrData[0].name}, ${arrData[0].sys.country}`;
             temp.innerText = arrData[0].main.temp;
             const tempMood = arrData[0].weather[0].main;
-            console.log(tempMood);
 
             //condtion to check weather
             var timedecide = new Date();
