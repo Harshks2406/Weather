@@ -8,7 +8,6 @@ const datahide= document.querySelector('.middle_layer');
 const getInfo = async(event) =>{
     event.preventDefault();
     let cityVal = cityName.value;
-    console.log(cityVal);
     if(cityVal === ""){
         city_name.innerText = `Please write the city name.`
         datahide.classList.add('data_hide');
