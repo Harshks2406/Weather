@@ -14,8 +14,6 @@ const day = document.getElementById('day');
             days = weekDay[currenTime.getDay()];
             let day = document.getElementById('day');
             day.innerText = days;
-            console.log(day);
-            console.log(days);
         };
 
         const getCurrentTime = () =>{
