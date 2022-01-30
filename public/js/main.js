@@ -20,7 +20,7 @@ const getInfo = async(event) =>{
             const response = await fetch(url);
             const data = await response.json();
             console.log(data);
-            const arrData = [data];
+            const arrData = [data]; 
             city_name.innerText= `${arrData[0].name}, ${arrData[0].sys.country}`;
             temp.innerText = arrData[0].main.temp;
             const tempMood = arrData[0].weather[0].main;
