@@ -22,7 +22,6 @@ const getInfo = async(event) =>{
             city_name.innerText= `${arrData[0].name}, ${arrData[0].sys.country}`;
             temp.innerText = arrData[0].main.temp;
             const tempMood = arrData[0].weather[0].main;
-            console.log(tempMood)
             //condtion to check weather
             var timedecide = new Date();
             var hourdecide = timedecide.getHours();
